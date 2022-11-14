@@ -1,17 +1,12 @@
 import React, {useState} from "react";
 
+type UncontrolledOnOffPropsType = {
+    onChange: (on: boolean) => void
+}
 
-export function UncontrolledOnOff() {
+export function UncontrolledOnOff(props: UncontrolledOnOffPropsType) {
     console.log('UncontrolledOnOff rendering')
     const[onOff, setOnOff] = useState<boolean>(false)
-
-    const offOnClick = () => {
-        setOnOff(false)
-    }
-
-    const onOnClick = () => {
-        setOnOff(true)
-    }
 
     const onStyle = {
         width: '30px',
@@ -38,6 +33,16 @@ export function UncontrolledOnOff() {
         display: 'inline-block',
         marginLeft: '5px',
         backgroundColor: onOff ? 'green' : 'red'
+    }
+
+    const offOnClick = () => {
+        setOnOff(false)
+        props.onChange(false)
+    }
+
+    const onOnClick = () => {
+        setOnOff(true)
+        props.onChange(true)
     }
 
     return (

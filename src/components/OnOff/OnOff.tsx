@@ -1,8 +1,8 @@
 import React from "react";
 
 type OnOffPropsType = {
-    onClick: (onOff: boolean) => void
-    onOff: boolean
+    onClick: (value: boolean) => void
+    value: boolean
 }
 
 export function OnOff(props: OnOffPropsType) {
@@ -15,7 +15,7 @@ export function OnOff(props: OnOffPropsType) {
         border: '1px solid black',
         display: 'inline-block',
         padding: '2px',
-        backgroundColor: props.onOff ? 'green' : 'white'
+        backgroundColor: props.value ? 'green' : 'white'
     }
     const offStyle = {
         width: '30px',
@@ -24,7 +24,7 @@ export function OnOff(props: OnOffPropsType) {
         display: 'inline-block',
         marginLeft: '5px',
         padding: '2px',
-        backgroundColor: !props.onOff ? 'red' : 'white'
+        backgroundColor: !props.value ? 'red' : 'white'
     }
     const indicatorStyle = {
         width: '10px',
@@ -33,7 +33,7 @@ export function OnOff(props: OnOffPropsType) {
         border: '1px solid black',
         display: 'inline-block',
         marginLeft: '5px',
-        backgroundColor: props.onOff ? 'green' : 'red'
+        backgroundColor: props.value ? 'green' : 'red'
     }
 
     return (
