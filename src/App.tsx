@@ -10,24 +10,22 @@ function App() {
     console.log('App rendering')
 
     return (
-        <div>
+        <div className={'App'}>
             <PageTitle title={'This is App Component'}/>
             <PageTitle title={'New Component'}/>
-            Article 1
             <Accordion titleValue={'Menu'} collapsed={true}/>
             <Accordion titleValue={'Users'} collapsed={false}/>
-            <UncontrolledAccordion titleValue={'Menu'}/>
-            <UncontrolledAccordion titleValue={'NewUsers'}/>
-            <UncontrolledRating />
-            <UncontrolledRating />
-            Article 2
-            <Rating value={5}/>
-            <Rating value={1}/>
-            <Rating value={2}/>
-            <Rating value={3}/>
+            <UncontrolledAccordion titleValue={'New Menu'}/>
+            <UncontrolledAccordion titleValue={'New Users'}/>
+            <UncontrolledRating/>
             <Rating value={4}/>
-            <Rating value={5}/>
-            <OnOff />
+            {/*<Rating value={5}/>*/}
+            {/*<Rating value={1}/>*/}
+            {/*<Rating value={2}/>*/}
+            {/*<Rating value={3}/>*/}
+            {/*<Rating value={4}/>*/}
+            {/*<Rating value={5}/>*/}
+            <OnOff/>
         </div>
     );
 }
