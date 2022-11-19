@@ -22,7 +22,7 @@ function App() {
             <UncontrolledAccordion titleValue={'New Menu'}/>
             <UncontrolledAccordion titleValue={'New Users'}/>
             <div>UncontrolledRating</div>
-            <UncontrolledRating/>
+            <UncontrolledRating onChange={() => {}}/>
             <div>ControlledRating</div>
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <div>UncontrolledOnOff</div>
