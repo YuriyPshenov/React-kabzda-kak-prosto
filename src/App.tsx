@@ -16,20 +16,20 @@ function App() {
 
     return (
         <div className={'App'}>
-            <PageTitle title={'This is App Component'}/>
-            <PageTitle title={'New Component'}/>
-            <Accordion titleValue={'Menu'} collapsed={accordionCollapsed} onChange={() => setAccordionCollapsed(!accordionCollapsed)}/>
-            <UncontrolledAccordion titleValue={'New Menu'}/>
-            <UncontrolledAccordion titleValue={'New Users'}/>
-            <div>UncontrolledRating</div>
-            <UncontrolledRating onChange={() => {}}/>
-            <div>ControlledRating</div>
-            <Rating value={ratingValue} onClick={setRatingValue}/>
-            <div>UncontrolledOnOff</div>
-            <UncontrolledOnOff onChange={setOnOff}/>
-            <div>{onOff.toString()}</div>
-            <div>ControlledOnOff</div>
-            <OnOff onClick={setOnOff} value={onOff}/>
+            {/*<PageTitle title={'This is App Component'}/>*/}
+            {/*<PageTitle title={'New Component'}/>*/}
+            {/*<Accordion titleValue={'Menu'} collapsed={accordionCollapsed} onChange={() => setAccordionCollapsed(!accordionCollapsed)}/>*/}
+            {/*<UncontrolledAccordion titleValue={'New Menu'}/>*/}
+            {/*<UncontrolledAccordion titleValue={'New Users'}/>*/}
+            {/*<div>UncontrolledRating</div>*/}
+            {/*<UncontrolledRating onChange={() => {}}/>*/}
+            {/*<div>ControlledRating</div>*/}
+            {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
+            {/*<div>UncontrolledOnOff</div>*/}
+            {/*<UncontrolledOnOff onChange={setOnOff}/>*/}
+            {/*<div>{onOff.toString()}</div>*/}
+            {/*<div>ControlledOnOff</div>*/}
+            {/*<OnOff onClick={setOnOff} value={onOff}/>*/}
         </div>
     );
 }
