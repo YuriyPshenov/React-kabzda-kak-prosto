@@ -1,8 +1,6 @@
 import React, {useState} from "react";
 import {action} from '@storybook/addon-actions'
-import Accordion, {AccordionPropsType} from "./Accordion";
-import {Story} from "@storybook/react";
-import {Primary} from "../../stories/Button.stories";
+import Accordion from "./Accordion";
 
 const GetCategoryObj = (categoryName: 'Color' | 'Events' | 'Other') => ({
     table: {
@@ -72,7 +70,13 @@ export const UsersUnCollapsedMode = () => {
 
 export const ModeChanging2 = () => {
     const [value, setValue] = useState(false)
-    return <Accordion titleValue={!value ? 'Users' : 'Menu'} collapsed={value} onChange={() => setValue(!value)} items={[{title: 'Dimych', value: 1}, {title: 'Valera', value: 2}, {title: 'Viktor', value: 3}]} onClick={(id) => {alert(`user with ID ${id} should be happy`)}}/>
+    console.log('rerender')
+    return (
+        <Accordion titleValue={!value ? 'Users' : 'Menu'}
+                   collapsed={value} onChange={() => setValue(!value)}
+                   items={[{title: 'Dimych', value: 1}, {title: 'Valera', value: 2}, {title: 'Viktor', value: 3}]}
+                   onClick={(id) => {alert(`user with ID ${id} should be happy`)}}/>
+    )
 }
 
 
